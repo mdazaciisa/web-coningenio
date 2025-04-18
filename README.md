@@ -4,6 +4,8 @@ Este proyecto es un prototipo de sitio web para una empresa de desarrollo y cons
 ## Mockup
 Este proyecto se basó inicialmente en un mockup o prototipo visual, que sirvió como guía para estructurar el sitio web.
 
+<img src="https://raw.githubusercontent.com/mdazaciisa/web-coningenio/main/prototipo.png" alt="Prototipo de página web" style="width: 100%; max-width: 100%; height: auto;" />
+
 El diseño final mejora la estética del prototipo, incorporando modo oscuro, responsividad y contenido dinámico desde una API externa.
 
 ## Características
