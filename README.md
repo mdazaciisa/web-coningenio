@@ -1,6 +1,14 @@
 # web-coningenio
 Este proyecto es un prototipo de sitio web para una empresa de desarrollo y consultoría de software. El objetivo fue construir una experiencia moderna, responsiva y dinámica, consumiendo datos desde una API externa protegida por autenticación.
 
+<h2>🔗 Vista previa</h2>
+<p>
+  <a href="https://mdazaciisa.github.io/web-coningenio/" target="_blank">
+    <img src="https://img.shields.io/badge/Ver%20sitio%20web-%F0%9F%94%8D-blue?style=for-the-badge" alt="Ver sitio web">
+  </a>
+</p>
+
+
 ## Mockup
 Este proyecto se basó inicialmente en un mockup o prototipo visual, que sirvió como guía para estructurar el sitio web.
 
