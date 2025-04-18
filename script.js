@@ -52,10 +52,10 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
             const select = document.getElementById("servicio");
-            data.forEach(service => {
+            result.data.forEach(service => {
                 const option = document.createElement("option");
-                option.value = service.title;
-                option.textContent = service.title;
+                option.value = service.titulo.esp;
+                option.textContent = service.titulo.esp;
                 select.appendChild(option);
             });
 
@@ -95,4 +95,61 @@ document.addEventListener("DOMContentLoaded", () => {
 
     loadServices();
     loadAboutUs();
+
+    const contactForm = document.getElementById("contactForm");
+
+contactForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    // Validaciones básicas (el HTML5 ya hace parte del trabajo)
+    const nombre = document.getElementById("nombre");
+    const email = document.getElementById("email");
+    const servicio = document.getElementById("servicio");
+    const mensaje = document.getElementById("mensaje");
+
+    let valid = true;
+
+    if (!nombre.value.trim()) {
+        document.getElementById("nombre-error").textContent = "Ingrese su nombre.";
+        valid = false;
+    } else {
+        document.getElementById("nombre-error").textContent = "";
+    }
+
+    if (!email.value.trim() || !email.checkValidity()) {
+        document.getElementById("email-error").textContent = "Ingrese un correo válido.";
+        valid = false;
+    } else {
+        document.getElementById("email-error").textContent = "";
+    }
+
+    if (!servicio.value) {
+        document.getElementById("servicio-error").textContent = "Seleccione un servicio.";
+        valid = false;
+    } else {
+        document.getElementById("servicio-error").textContent = "";
+    }
+
+    if (!mensaje.value.trim()) {
+        document.getElementById("mensaje-error").textContent = "Escriba un mensaje.";
+        valid = false;
+    } else {
+        document.getElementById("mensaje-error").textContent = "";
+    }
+
+    if (valid) {
+        console.log("Formulario enviado con éxito:");
+        console.log("Nombre:", nombre.value);
+        console.log("Email:", email.value);
+        console.log("Servicio:", servicio.value);
+        console.log("Mensaje:", mensaje.value);
+
+        // Mostrar mensaje de éxito
+        alert("¡Gracias por tu mensaje! Te contactaremos pronto.");
+
+        // Limpiar formulario
+        contactForm.reset();
+    }
+});
+
 });
